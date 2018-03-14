@@ -15,7 +15,8 @@
     "url": "http://github.com/graphql/swapi-graphql.git"
   },
   "options": {
-    "mocha": "--compilers js:babel-register --require scripts/mocha-bootload src/**/__tests__/*.js"
+    "mocha": "--compilers js:babel-register --require scripts/mocha-bootload src/**/__tests__/*.js",
+    "mocha1": "--compilers js:babel-register --require scripts/mocha-bootload src/schema/__tests__/planet.js"
   },
   "babel": {
     "optional": [
@@ -37,6 +38,7 @@
     "start": "babel-node src/server/main.js",
     "watch": "babel scripts/watch.js | node",
     "testonly": "mocha $npm_package_options_mocha",
+    "tonly1": "mocha $npm_package_options_mocha1",
     "lint": "eslint src",
     "lintfix": "eslint --fix src",
     "check": "flow check",
