@@ -24,13 +24,8 @@ app.use(
 );
 
 // Listen for incoming HTTP requests
-const listener = app.listen(() => {
-  let host = listener.address().address;
-  if (host === '::') {
-    host = 'localhost';
-  }
-  const port = listener.address().port;
-  /* eslint-disable no-console */
-  console.log('Listening at http://%s%s', host, port === 80 ? '' : ':' + port);
-  /* eslint-enable no-console */
-});
+
+const listener = app.listen(3000);
+const port = listener.address().port;
+/* eslint-disable no-console */
+console.log("Listening on port " + port);
