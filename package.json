@@ -50,7 +50,7 @@
     "deploy": "scripts/build-public && scripts/deploy-public",
     "pretty": "node scripts/pretty.js",
     "pretty-check": "node scripts/pretty.js --check",
-    "print-schema": "npm run download && babel-node scripts/print-schema.js"
+    "print-schema": "babel-node scripts/print-schema.js"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
